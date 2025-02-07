@@ -8,7 +8,7 @@ The test should be contained entirely within this file. It should:
 4.Leave a Guest Book entry (it will not appear after you submit, as it has gone into a review queue)
 */
 
-Scenario("Task 2 - Leave a Guest Book entry", async ({ I, guestBookPage }) => {
+Scenario("Task 2 - Leave a Guest Book entry", async ({ I, obituaryPage }) => {
   //TEST DATA
   let testData = {
     url: "/us/obituaries/chicagotribune/name/virginia-gruchalski-obituary?pid=196167379",
@@ -22,10 +22,10 @@ Scenario("Task 2 - Leave a Guest Book entry", async ({ I, guestBookPage }) => {
 
   //STEPS
   I.amOnPage(testData.url);
-  I.seeElement(guestBookPage.nameSection);
-  let name = await I.grabTextFrom(guestBookPage.nameSection);
+  I.seeElement(obituaryPage.nameSection);
+  let name = await I.grabTextFrom(obituaryPage.nameSection);
   I.assertEqual(name, testData.decedentName);
-  I.scrollTo(guestBookPage.guestBookFormMsg);
-  guestBookPage.createGuestBookEntry(testData.guestBookForm);
-  I.seeElement(guestBookPage.GuestBookSuccessBox);
+  I.scrollTo(obituaryPage.guestBookFormMsg);
+  obituaryPage.createGuestBookEntry(testData.guestBookForm);
+  I.seeElement(obituaryPage.GuestBookSuccessBox);
 });

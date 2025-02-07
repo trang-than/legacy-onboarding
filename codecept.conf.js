@@ -32,7 +32,7 @@ exports.config = {
   },
   include: {
     I: "./steps_file.js",
-    guestBookPage: "./pages/GuestBookPage.js",
+    obituaryPage: "./pages/ObituaryPage.js",
   },
   name: "qa-legacy",
 };

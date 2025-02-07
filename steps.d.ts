@@ -1,12 +1,12 @@
 /// <reference types='codeceptjs' />
 type steps_file = typeof import("./steps_file.js");
-type guestBookPage = typeof import("./pages/GuestBookPage.js");
+type obituaryPage = typeof import("./pages/ObituaryPage.js");
 type ChaiWrapper = import("codeceptjs-chai");
 
 declare namespace CodeceptJS {
   interface SupportObject {
     I: I;
-    guestBookPage: guestBookPage;
+    obituaryPage: obituaryPage;
     current: any;
   }
   interface Methods extends WebDriver, ChaiWrapper {}
