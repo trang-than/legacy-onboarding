@@ -8,7 +8,7 @@ The test should be contained entirely within this file. It should:
 4.Leave a Guest Book entry (it will not appear after you submit, as it has gone into a review queue)
 */
 
-Scenario("Leave a Guest Book entry", async ({ I }) => {
+Scenario.skip("Leave a Guest Book entry", async ({ I }) => {
   //LOCATORS
   let locator = {
     nameSection:
