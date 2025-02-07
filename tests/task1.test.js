@@ -34,7 +34,7 @@ Scenario("Leave a Guest Book entry", async ({ I }) => {
   //STEPS
   I.amOnPage(testData.url);
   I.seeElement(locator.nameSection);
-  let name = await I.grabTextFrom('//*[@data-component="NameHeadingText"]');
+  let name = await I.grabTextFrom(locator.nameSection);
   I.assertEqual(name, testData.decedentName);
   I.scrollTo(locator.guestBookFormMsg);
   I.fillField(locator.guestBookFormMsg, testData.guestBookMsg);
