@@ -22,12 +22,16 @@ exports.config = {
             "--incognito",
           ],
         },
+        webSocketUrl: true,
       },
       smartWait: 5000,
       waitForTimeout: 5000,
     },
     ChaiWrapper: {
       require: "codeceptjs-chai",
+    },
+    MSSQLHelper: {
+      require: "./custom_helper/MSSQLHelper.js",
     },
   },
   include: {
