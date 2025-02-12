@@ -38,5 +38,6 @@ Scenario("Task 3 - Connect DB", async ({ I, obituaryPage }) => {
   I.assertEqual(actualName, expectedName);
   I.scrollTo(obituaryPage.guestBookFormMsg);
   obituaryPage.createGuestBookEntry(testData.guestBookForm);
+  I.waitForVisible(obituaryPage.GuestBookSuccessBox);
   I.seeElement(obituaryPage.GuestBookSuccessBox);
 });
