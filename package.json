@@ -1,27 +1,31 @@
 {
-    "name": "qa-legacy",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "codeceptjs": "codeceptjs run --steps",
-        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
-        "codeceptjs:ui": "codecept-ui --app",
-        "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js",
-        "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js",
-        "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-        "@codeceptjs/configure": "^1.0.2",
-        "@codeceptjs/examples": "^1.2.4",
-        "@codeceptjs/ui": "^1.2.0",
-        "@types/chai": "^5.0.1",
-        "codeceptjs": "^3.6.10",
-        "codeceptjs-chai": "^2.3.5",
-        "webdriverio": "^8.41.0"
-    }
+  "name": "qa-legacy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "codeceptjs": "codeceptjs run --steps",
+    "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+    "codeceptjs:ui": "codecept-ui --app",
+    "codeceptjs:demo": "codeceptjs run --steps -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js",
+    "codeceptjs:demo:headless": "HEADLESS=true codeceptjs run --steps -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js",
+    "codeceptjs:demo:ui": "codecept-ui --app  -c node_modules/@codeceptjs/examples/codecept.webdriver.conf.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@codeceptjs/configure": "^1.0.2",
+    "@codeceptjs/examples": "^1.2.4",
+    "@codeceptjs/ui": "^1.2.0",
+    "@types/chai": "^5.0.1",
+    "codeceptjs": "^3.6.10",
+    "codeceptjs-chai": "^2.3.5",
+    "webdriverio": "^8.41.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "mssql": "^11.0.1"
+  }
 }

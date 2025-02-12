@@ -35,3 +35,6 @@ allure*
 
 #Dist files
 dist
+
+#Local files
+local_*
