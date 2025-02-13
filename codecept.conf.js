@@ -33,6 +33,10 @@ exports.config = {
     MSSQLHelper: {
       require: "./custom_helper/MSSQLHelper.js",
     },
+    REST: {
+      endpoint: "https://www.qa-legacy.com",
+      prettyPrintJson: true,
+    },
   },
   include: {
     I: "./steps_file.js",
