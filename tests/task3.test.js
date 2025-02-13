@@ -40,4 +40,7 @@ Scenario("Task 3 - Connect DB", async ({ I, obituaryPage }) => {
   obituaryPage.createGuestBookEntry(testData.guestBookForm);
   I.waitForVisible(obituaryPage.GuestBookSuccessBox);
   I.seeElement(obituaryPage.GuestBookSuccessBox);
-});
+})
+  .tag("@janus_beta")
+  .tag("@webdriver_ui")
+  .tag("@safe_for_production");
