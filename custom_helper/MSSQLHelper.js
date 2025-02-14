@@ -43,7 +43,6 @@ class MSSQLHelper extends Helper {
   }
 
   async closeDBConnection() {
-    console.log("Close DB connection...");
     return await closeConnection();
   }
 }
