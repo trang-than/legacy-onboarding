@@ -27,5 +27,8 @@ Scenario("Task 2 - Leave a Guest Book entry", async ({ I, obituaryPage }) => {
   I.assertEqual(name, testData.decedentName);
   I.scrollTo(obituaryPage.guestBookFormMsg);
   obituaryPage.createGuestBookEntry(testData.guestBookForm);
+  I.waitForVisible(obituaryPage.GuestBookSuccessBox);
   I.seeElement(obituaryPage.GuestBookSuccessBox);
-});
+})
+  .tag("@janus_beta")
+  .tag("@webdriver_ui");

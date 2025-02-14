@@ -1,4 +1,4 @@
-Feature("Guest Book Entry");
+Feature("Task 1 - Guest Book Entry");
 
 /*
 The test should be contained entirely within this file. It should:
@@ -8,7 +8,7 @@ The test should be contained entirely within this file. It should:
 4.Leave a Guest Book entry (it will not appear after you submit, as it has gone into a review queue)
 */
 
-Scenario.skip("Leave a Guest Book entry", async ({ I }) => {
+Scenario("Task 1 - Leave a Guest Book entry", async ({ I }) => {
   //LOCATORS
   let locator = {
     nameSection:
@@ -41,5 +41,8 @@ Scenario.skip("Leave a Guest Book entry", async ({ I }) => {
   I.fillField(locator.guestBookFormFrom, testData.guestBookFrom);
   I.fillField(locator.guestBookFormEmail, testData.guestBookEmail);
   I.click(locator.guestBookFormSubmitBtn);
+  I.waitForVisible(locator.GuestBookSuccessBox);
   I.seeElement(locator.GuestBookSuccessBox);
-});
+})
+  .tag("@janus_beta")
+  .tag("@webdriver_ui");
