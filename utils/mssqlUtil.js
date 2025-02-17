@@ -47,7 +47,7 @@ async function closeConnection() {
   if (pool) {
     await pool.close();
     pool = null;
-    console.log("MSSQL Connection Closed");
+    console.log("Close DB Connection...");
   }
 }
 
